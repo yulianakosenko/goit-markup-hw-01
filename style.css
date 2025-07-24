@@ -6,45 +6,41 @@
 /* ===============================
   Reset styles
 ================================= */
+/* Загальні скидання */
+
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
   font-family: 'Roboto', sans-serif;
-  color: #434455;
+  color: #2e2f42;
   background-color: #ffffff;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
 }
 
-/* ===============================
-  Container
-================================= */
+/* Контейнер */
 .container {
   max-width: 1158px;
-  padding: 0 15px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
-/* ===============================
-  Header
-================================= */
+/* Header */
 .header {
-  border-bottom: 1px solid #e7e9fc;
   background-color: #ffffff;
+  border-bottom: 1px solid #e7e9fc;
 }
 
-.header .container {
+.header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px 0;
-  gap: 40px; /* Відступ між меню і контактами */
+  height: 72px;
 }
 
+/* Логотип */
 .logo {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
@@ -53,49 +49,51 @@ body {
   letter-spacing: 0.03em;
   color: #4d5ae5;
   text-decoration: none;
+  display: inline-block;
+  white-space: nowrap;
+  margin-right: 76px;
 }
 
-/* Меню навігації */
+/* Навігація */
+.nav {
+  display: flex;
+  align-items: center;
+}
+
 .nav-list {
-  list-style: none;
   display: flex;
   gap: 40px;
-  margin: 0;
-  padding: 0;
+  list-style: none;
 }
 
-.nav-list li a {
+.nav-list a {
   text-decoration: none;
   color: #2e2f42;
   font-weight: 500;
-  padding: 24px 0;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
 }
 
-.nav-list li a:hover,
-.nav-list li a:focus {
-  color: #404bbf;
-}
-
-/* Контактні дані (поза nav, але в хедері) */
+/* Контакти */
 .contact-list {
-  list-style: none;
+  font-style: normal;
+}
+
+.contact-list ul {
   display: flex;
   gap: 40px;
-  margin: 0;
-  padding: 0;
+  list-style: none;
 }
 
-.contact-list li a {
+.contact-list a {
   text-decoration: none;
-  color: #2e2f42;
-  font-weight: 500;
-  padding: 24px 0;
+  color: #434455;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
 }
 
-.contact-list li a:hover,
-.contact-list li a:focus {
-  color: #404bbf;
-}
 
 /* ===============================
   Hero section
@@ -166,6 +164,19 @@ body {
   line-height: 1.5;
 }
 
+/* Для прихованих заголовків для SEO і доступності */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
 /* ===============================
   Team section
 ================================= */
@@ -187,6 +198,8 @@ body {
   display: flex;
   gap: 24px;
   justify-content: center;
+  padding: 0;
+  margin: 0;
 }
 
 .team-list li {
@@ -233,6 +246,7 @@ body {
 .footer .container {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 
 .footer-logo {
